@@ -2,26 +2,6 @@
 
 An n-puzzle solver.
 
-### Search strategies
-
-This is the list of currently supported search strategies,
-in human-readable form followed by how they must be sent to the program.
-
-Uninformed search algorithms:
-- Breadth-first search (`BFS`)
-
-Informed search algorithms:
-- Greedy search (`G`)
-- A* search (`A*`)
-
-The informed search algorithms can use one of the following heuristics:
-
-- Heuristic 1 (`mt`): number of **m**isplaced **t**iles, i.e., number of blocks in the
-current state which don't share the same position with the corresponding
-block in the desired state.
-- Heuristic 2 (`md`) (default): sum of the **M**anhattan **d**istance of a misplaced block's position
-to its desired position, for every misplaced block.
-
 ## Usage
 
 With Python3 installed, run the solver with 
@@ -55,3 +35,23 @@ nodes followed: 4               # Nodes explored
 solution:                       # Sequence of actions taken
 left; down; right; right;
 ```
+
+### Search strategies
+
+This is the list of currently supported search strategies,
+in human-readable form followed by how they must be sent to the program.
+
+Uninformed search algorithms:
+- Breadth-first search (`BFS`)
+
+Informed search algorithms:
+- Greedy search (`G`)
+- A* search (`A*`)
+
+The informed search algorithms can use one of the following heuristics:
+
+- Heuristic 1 (`mt`): number of **m**isplaced **t**iles, i.e., number of blocks in the
+current state which don't share the same position with the corresponding
+block in the desired state.
+- Heuristic 2 (`md`) (default): sum of the **M**anhattan **d**istance of a misplaced block's position
+to its desired position, for every misplaced block.
