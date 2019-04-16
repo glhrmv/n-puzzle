@@ -1,6 +1,6 @@
 # n-puzzle
 
-An n-puzzle solver.
+An [n-puzzle](https://en.wikipedia.org/wiki/15_puzzle) solver.
 
 ## Usage
 
