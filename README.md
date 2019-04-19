@@ -50,8 +50,8 @@ Informed search algorithms:
 
 The informed search algorithms can use one of the following heuristics:
 
-- Heuristic 1 (`mt`): number of **m**isplaced **t**iles, i.e., number of blocks in the
+- Heuristic 1 (`mt`) (default): number of **m**isplaced **t**iles, i.e., number of blocks in the
 current state which don't share the same position with the corresponding
 block in the desired state.
-- Heuristic 2 (`md`) (default): sum of the **M**anhattan **d**istance of a misplaced block's position
+- Heuristic 2 (`md`): sum of the **M**anhattan **d**istance of a misplaced block's position
 to its desired position, for every misplaced block.
