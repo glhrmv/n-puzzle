@@ -128,7 +128,7 @@ def breadth_first(initial_state, desired_state, heuristic=""):
 	return _search(initial_state, desired_state, 
 		open_set_get=open_set.popleft, open_set_add=open_set.append)
 	
-def greedy_best_first(initial_state, desired_state, heuristic=manhattan_distance):
+def greedy_best_first(initial_state, desired_state, heuristic=misplaced_tiles):
 	def open_set_add(node):
 		priority = heuristic(node.state, desired_state)
 		open_set.put( (priority, node) )
@@ -141,7 +141,7 @@ def greedy_best_first(initial_state, desired_state, heuristic=manhattan_distance
 
 	return _search(initial_state, desired_state, open_set_get, open_set_add)
 	
-def a_star(initial_state, desired_state, heuristic=manhattan_distance):
+def a_star(initial_state, desired_state, heuristic=misplaced_tiles):
 	def open_set_add(node):
 		priority = node.num_parents + heuristic(node.state, desired_state)
 		open_set.put( (priority, node) )
