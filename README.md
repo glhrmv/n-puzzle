@@ -24,19 +24,7 @@ solver could be `python3 src/main.py puzzles/puzzle1.txt A*`.
 The optional argument `heuristic` is one of the currently supported
 heuristic functions for the intelligent search algorithms to use. 
 
-### Results
-
-The program's successful output follows the following structure:
-```
-time taken: 0.00167 secs        # Time taken
-file: puzzles/puzzle1.text      # File used for puzzle
-strategy: A* (heuristic: md)    # Strategy used (incl. heuristic)
-nodes followed: 4               # Nodes explored
-solution:                       # Sequence of actions taken
-left; down; right; right;
-```
-
-### Search strategies
+## Search strategies
 
 This is the list of currently supported search strategies,
 in human-readable form followed by how they must be sent to the program.
@@ -55,3 +43,15 @@ current state which don't share the same position with the corresponding
 block in the desired state.
 - Heuristic 2 (`md`): sum of the **M**anhattan **d**istance of a misplaced block's position
 to its desired position, for every misplaced block.
+
+## Results
+
+The program's successful output follows the following structure:
+```
+time taken: 0.00167 secs        # Time taken
+file: puzzles/puzzle1.text      # File used for puzzle
+strategy: A* (heuristic: md)    # Strategy used (incl. heuristic)
+nodes followed: 4               # Nodes explored
+solution:                       # Sequence of actions taken
+left; down; right; right;
+```
